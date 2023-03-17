@@ -9,7 +9,8 @@ public class Main {
 
         int device = EntradaSalida.EmtradaInt("Que vehiculo vas a elegir? \n" +
                 "0. CAMION" + "\n" +
-                "1. BICICLETA ");
+                "1. BICICLETA " +"\n"+
+                "2. Barco ");
 
         switch (device){
             case Factory.CAMION:
@@ -19,9 +20,13 @@ public class Main {
                 break;
             case Factory.BICICLETA:
                 vehiculo = Factory.getProducto(device);
-                coste = vehiculo.costeTotal(36214);
-                tipoEmbalage = vehiculo.tipoEmbalage(10f,10f,20f,10f);
+                coste = vehiculo.costeTotal(500);
+                tipoEmbalage = vehiculo.tipoEmbalage(40f,30f,70f,30f);
                 break;
+            case Factory.Barco:
+                vehiculo = Factory.getProducto(device);
+                coste = vehiculo.costeTotal(80657);
+                tipoEmbalage = vehiculo.tipoEmbalage(80f,80f,160f,50f);
 
         }
 
